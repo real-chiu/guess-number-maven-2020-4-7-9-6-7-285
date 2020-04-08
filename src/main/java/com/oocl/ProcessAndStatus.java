@@ -27,7 +27,10 @@ public class ProcessAndStatus {
         roundCount += 1;
     }
 
-    public boolean loseGame(boolean loseGame) {
-        return false;
+    public String loseGame() {
+        if (roundCount > 6) {
+            return "You are lose!";
+        }
+        return "";
     }
 }

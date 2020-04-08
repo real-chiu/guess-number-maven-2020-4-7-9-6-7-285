@@ -14,8 +14,7 @@ public class Validation {
         return parsedUserInput.stream().distinct().collect(Collectors.toList()).size() == VALID_USER_INPUT_LENGTH;
     }
 
-
     public boolean checkIfRoundCountExceedSix() {
-        return false;
+        return ProcessAndStatus.getRoundCount() > 6;
     }
 }

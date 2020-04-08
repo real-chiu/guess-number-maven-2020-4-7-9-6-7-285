@@ -29,8 +29,11 @@ public class ValidationTest {
 
     @Test
     public void should_lose_game_when_round_count_exceed_six() {
+        for (int roundCount = 0; roundCount < 7; roundCount += 1) {
+            ProcessAndStatus.incrementRoundCount();
+        }
         boolean loseGame = validation.checkIfRoundCountExceedSix();
         Assert.assertEquals(true, loseGame);
-        Assert.assertEquals("You are lose!", processAndStatus.loseGame(loseGame));
+        Assert.assertEquals("You are lose!", processAndStatus.loseGame());
     }
 }
