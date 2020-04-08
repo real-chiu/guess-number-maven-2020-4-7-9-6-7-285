@@ -1,10 +1,19 @@
 package com.oocl;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.stream.IntStream;
 
 public class RandomNumberGenerator {
 
     public ArrayList<Integer> generateNonRepetitiveFourDigitRandomNumber() {
-        return new ArrayList<>();
+        ArrayList<Integer> allDigits = new ArrayList<>();
+        for (int digit = 0; digit < 10; digit += 1) {
+            allDigits.add(digit);
+        }
+
+        Collections.shuffle(allDigits);
+
+        return new ArrayList<>(allDigits.subList(0, 4));
     }
 }
