@@ -43,7 +43,7 @@ public class ProcessAndStatus {
     }
 
     public String printUserInputOutputAndStatus (ArrayList<Integer> userInput, String output) {
-        return String.format("1 1 1 1       TEST\n", userInput.get(0), userInput.get(1), userInput.get(2), userInput.get(3), output);
+        return String.format("%s %s %s %s       %s\n", userInput.get(0), userInput.get(1), userInput.get(2), userInput.get(3), output);
     }
 
 }
