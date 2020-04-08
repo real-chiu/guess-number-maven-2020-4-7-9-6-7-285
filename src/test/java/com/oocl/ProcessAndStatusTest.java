@@ -49,8 +49,8 @@ public class ProcessAndStatusTest {
         userInputTwo.add(2);
         userInputTwo.add(3);
         userInputTwo.add(5);
-        String outputOne = calculatorOfXAXB.checkDigitAndPositionCorrect(userInputOne, answer) + calculatorOfXAXB.checkDigitCorrectButDigitPositionIncorrect(userInputOne, answer);
-        String outputTwo = calculatorOfXAXB.checkDigitAndPositionCorrect(userInputTwo, answer) + calculatorOfXAXB.checkDigitCorrectButDigitPositionIncorrect(userInputTwo, answer);
+        String outputOne = calculatorOfXAXB.calulateXAXB(userInputOne, answer);
+        String outputTwo = calculatorOfXAXB.calulateXAXB(userInputTwo, answer);     
         String actualGameStatus = processAndStatus.printHeader();
         actualGameStatus += processAndStatus.printUserInputOutputAndStatus(userInputOne, outputOne);
         actualGameStatus += processAndStatus.printUserInputOutputAndStatus(userInputTwo, outputTwo);
