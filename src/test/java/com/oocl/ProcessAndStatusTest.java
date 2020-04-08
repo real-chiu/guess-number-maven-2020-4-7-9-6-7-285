@@ -30,8 +30,8 @@ public class ProcessAndStatusTest {
     @Test
     public void should_able_to_print_game_status() {
         String expectedGameStatus = "Input     Output\n"
-                + "1 2 3 4       3A0B\n"
-                + "1 2 3 5       4A0B\n"
+                + "1 2 3 4        3A0B\n"
+                + "1 2 3 5        4A0B\n"
                 + "You win!";
 
         ArrayList<Integer> answer = new ArrayList<Integer>();
@@ -49,8 +49,8 @@ public class ProcessAndStatusTest {
         userInputTwo.add(2);
         userInputTwo.add(3);
         userInputTwo.add(5);
-        String outputOne = calculatorOfXAXB.checkDigitCorrect(userInputOne, answer) + calculatorOfXAXB.checkDigitPositionIncorrect(userInputOne, answer);
-        String outputTwo = calculatorOfXAXB.checkDigitCorrect(userInputTwo, answer) + calculatorOfXAXB.checkDigitPositionIncorrect(userInputTwo, answer);
+        String outputOne = calculatorOfXAXB.checkDigitAndPositionCorrect(userInputOne, answer) + calculatorOfXAXB.checkDigitCorrectButDigitPositionIncorrect(userInputOne, answer);
+        String outputTwo = calculatorOfXAXB.checkDigitAndPositionCorrect(userInputTwo, answer) + calculatorOfXAXB.checkDigitCorrectButDigitPositionIncorrect(userInputTwo, answer);
         String actualGameStatus = processAndStatus.printHeader();
         actualGameStatus += processAndStatus.printUserInputOutputAndStatus(userInputOne, outputOne);
         actualGameStatus += processAndStatus.printUserInputOutputAndStatus(userInputTwo, outputTwo);

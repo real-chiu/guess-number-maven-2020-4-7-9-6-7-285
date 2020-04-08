@@ -38,12 +38,19 @@ public class ProcessAndStatus {
         return "You win!";
     }
 
+    public String printWrongInput() {
+        return "Wrong Input，Input again";
+    }
     public String printHeader() {
         return "Input     Output\n";
     }
 
     public String printUserInputOutputAndStatus (ArrayList<Integer> userInput, String output) {
-        return String.format("%s %s %s %s       %s\n", userInput.get(0), userInput.get(1), userInput.get(2), userInput.get(3), output);
+        String input = "";
+        for(Object inputDigit: userInput.toArray()) {
+            input += ((Integer) inputDigit) + " ";
+        }
+        return String.format("%s       %s\n", input, output);
     }
 
 }

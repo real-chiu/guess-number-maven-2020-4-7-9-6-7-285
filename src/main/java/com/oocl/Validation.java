@@ -19,8 +19,8 @@ public class Validation {
         return ProcessAndStatus.getRoundCount() > 6;
     }
 
-    public boolean checkIfUserGetCorrectAnswer(String correctDigit, String correctPosition) {
-        if ((correctDigit + correctPosition).equals(CORRECT_ANSWER_CHECK_STRING)) {
+    public boolean checkIfUserGetCorrectAnswer(String output) {
+        if (output.equals(CORRECT_ANSWER_CHECK_STRING)) {
             return true;
         }
         return false;

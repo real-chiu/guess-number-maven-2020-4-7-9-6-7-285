@@ -4,23 +4,18 @@ import java.util.ArrayList;
 
 public class CalculatorOfXAXB {
 
-    public String checkDigitCorrect(ArrayList<Integer> userInput, ArrayList<Integer> answer) {
-        int finalCorrectDigitCount = userInput.stream().reduce(0, (intermediateCorrectDigitCount, currentDigit) -> {
-            if (answer.contains(currentDigit)) {
-                return ++intermediateCorrectDigitCount;
-            }
-            return intermediateCorrectDigitCount;
-        });
-        return Integer.toString(finalCorrectDigitCount) + "A";
-    }
-
-    public String checkDigitPositionIncorrect(ArrayList<Integer> userInput, ArrayList<Integer> answer) {
+    public String calulateXAXB(ArrayList<Integer> userInput, ArrayList<Integer> answer) {
+        int finalCorrectDigitCount = 0;
         int finalIncorrectDigitPositionCount = 0;
         for (int index = 0; index < userInput.size(); index += 1) {
-            if (answer.contains(userInput.get(index)) && userInput.get(index) != answer.get(index)) {
-                finalIncorrectDigitPositionCount++;
+            if (answer.contains(userInput.get(index))) {
+                if (userInput.get(index) == answer.get(index)) {
+                    finalCorrectDigitCount++;
+                } else {
+                    finalIncorrectDigitPositionCount++;
+                }
             }
         }
-        return Integer.toString(finalIncorrectDigitPositionCount) + "B";
+        return Integer.toString(finalCorrectDigitCount) + "A" + Integer.toString(finalIncorrectDigitPositionCount) + "B";
     }
 }

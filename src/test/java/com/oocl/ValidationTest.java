@@ -39,9 +39,8 @@ public class ValidationTest {
 
     @Test
     public void should_win_game_when_user_get_correct_answer() {
-        String correctDigit = "4A";
-        String correctPosition = "0B";
-        boolean winGame = validation.checkIfUserGetCorrectAnswer(correctDigit, correctPosition);
+        String correctAnswer = "4A0B";
+        boolean winGame = validation.checkIfUserGetCorrectAnswer("4A0B");
         Assert.assertEquals(true, winGame);
         Assert.assertEquals("You win!", processAndStatus.winGame());
     }

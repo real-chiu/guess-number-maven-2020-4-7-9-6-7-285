@@ -21,79 +21,44 @@ public class CalculatorOfXAXBTest {
     }
 
     @Test
-    public void should_return_4A_when_digit_are_all_correct() {
+    public void should_return_4A0B_when_digit_are_all_correct() {
         ArrayList<Integer> answer = new ArrayList<Integer>();
         answer.add(1);
         answer.add(2);
         answer.add(3);
         answer.add(4);
-        String result = calculatorOfXAXB.checkDigitCorrect(userInput, answer);
-        Assert.assertEquals("4A", result);
+        String result = calculatorOfXAXB.calulateXAXB(userInput, answer);
+        Assert.assertEquals("4A0B", result);
     }
 
     @Test
-    public void should_return_0A_when_digit_are_all_not_correct() {
+    public void should_return_0A0B_when_digit_are_all_not_correct() {
         ArrayList<Integer> answer = new ArrayList<Integer>();
         answer.add(5);
         answer.add(6);
         answer.add(7);
         answer.add(8);
-        String result = calculatorOfXAXB.checkDigitCorrect(userInput, answer);
-        Assert.assertEquals("0A", result);
+        String result = calculatorOfXAXB.calulateXAXB(userInput, answer);
+        Assert.assertEquals("0A0B", result);
     }
 
     @Test
-    public void should_return_XA_when_digit_are_partially_correct() {
+    public void should_return_XAXB_when_digit_are_partially_correct() {
         ArrayList<Integer> answer = new ArrayList<Integer>();
-        answer.add(4);
+        answer.add(1);
         answer.add(6);
         answer.add(7);
-        answer.add(8);
-        String result = calculatorOfXAXB.checkDigitCorrect(userInput, answer);
-        Assert.assertEquals("1A", result);
-    }
-
-    @Test
-    public void should_return_0B_when_digit_position_are_all_correct() {
-        ArrayList<Integer> answer = new ArrayList<Integer>();
-        answer.add(1);
-        answer.add(2);
-        answer.add(3);
         answer.add(4);
-        String result = calculatorOfXAXB.checkDigitPositionIncorrect(userInput, answer);
-        Assert.assertEquals("0B", result);
+        String result = calculatorOfXAXB.calulateXAXB(userInput, answer);
+        Assert.assertEquals("2A0B", result);
+
+        ArrayList<Integer> answer2 = new ArrayList<Integer>();
+        answer2.add(1);
+        answer2.add(4);
+        answer2.add(2);
+        answer2.add(3);
+        String result2 = calculatorOfXAXB.calulateXAXB(userInput, answer2);
+        Assert.assertEquals("1A3B", result2);
     }
 
-    @Test
-    public void should_return_4B_when_digit_position_are_all_not_correct() {
-        ArrayList<Integer> answer = new ArrayList<Integer>();
-        answer.add(4);
-        answer.add(3);
-        answer.add(2);
-        answer.add(1);
-        String result = calculatorOfXAXB.checkDigitPositionIncorrect(userInput, answer);
-        Assert.assertEquals("4B", result);
-    }
-
-    @Test
-    public void should_return_XB_when_digit_position_are_paritially_correct() {
-        ArrayList<Integer> answer = new ArrayList<Integer>();
-        answer.add(1);
-        answer.add(4);
-        answer.add(2);
-        answer.add(3);
-        String result = calculatorOfXAXB.checkDigitPositionIncorrect(userInput, answer);
-        Assert.assertEquals("3B", result);
-    }
-
-    @Test
-    public void should_return_0B_when_all_digit_are_not_correct() {
-        ArrayList<Integer> answer = new ArrayList<Integer>();
-        answer.add(5);
-        answer.add(6);
-        answer.add(7);
-        answer.add(8);
-        String result = calculatorOfXAXB.checkDigitPositionIncorrect(userInput, answer);
-        Assert.assertEquals("0B", result);
-    }
 }
