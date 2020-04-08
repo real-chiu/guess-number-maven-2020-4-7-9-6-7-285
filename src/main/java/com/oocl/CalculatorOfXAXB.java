@@ -15,13 +15,10 @@ public class CalculatorOfXAXB {
     }
 
     public String checkDigitPositionCorrect(ArrayList<Integer> userInput, ArrayList<Integer> answer) {
-        if (userInput.get(0) == answer.get(0) && userInput.get(1) == answer.get(1) && userInput.get(2) == answer.get(2) && userInput.get(3) == answer.get(3)) {
-            return "4B";
+        int finalCorrectDigitPositionCount = 0;
+        for (int index = 0; index < userInput.size(); index += 1) {
+            if (userInput.get(index) == answer.get(index)) finalCorrectDigitPositionCount++;
         }
-
-        if (userInput.get(0) != answer.get(0) && userInput.get(1) != answer.get(1) && userInput.get(2) != answer.get(2) && userInput.get(3) != answer.get(3)) {
-            return "0B";
-        }
-        return "";
+        return Integer.toString(finalCorrectDigitPositionCount) + "B";
     }
 }
