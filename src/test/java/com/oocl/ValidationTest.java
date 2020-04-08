@@ -26,4 +26,11 @@ public class ValidationTest {
 
         Assert.assertEquals(false, validation.checkIfInputDigitIsDistinct(mockParsedUserInputWithRepeatedDigit));
     }
+
+    @Test
+    public void should_lose_game_when_round_count_exceed_six() {
+        boolean loseGame = validation.checkIfRoundCountExceedSix();
+        Assert.assertEquals(true, loseGame);
+        Assert.assertEquals("You are lose!", processAndStatus.loseGame(loseGame));
+    }
 }
