@@ -33,4 +33,8 @@ public class ProcessAndStatus {
         }
         return "";
     }
+
+    public String winGame() {
+        return "";
+    }
 }

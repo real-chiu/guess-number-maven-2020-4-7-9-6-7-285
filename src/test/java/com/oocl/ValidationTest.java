@@ -36,4 +36,12 @@ public class ValidationTest {
         Assert.assertEquals(true, loseGame);
         Assert.assertEquals("You are lose!", processAndStatus.loseGame());
     }
+
+    @Test
+    public void should_win_game_when_user_get_correct_answer() {
+        boolean winGame = validation.checkIfUserGetCorrectAnswer();
+        Assert.assertEquals(true, winGame);
+        Assert.assertEquals("You win!", processAndStatus.winGame());
+
+    }
 }

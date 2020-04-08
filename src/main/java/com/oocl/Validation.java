@@ -17,4 +17,8 @@ public class Validation {
     public boolean checkIfRoundCountExceedSix() {
         return ProcessAndStatus.getRoundCount() > 6;
     }
+
+    public boolean checkIfUserGetCorrectAnswer() {
+        return false;
+    }
 }
