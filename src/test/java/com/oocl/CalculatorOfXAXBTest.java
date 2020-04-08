@@ -63,4 +63,15 @@ public class CalculatorOfXAXBTest {
         String result = calculatorOfXAXB.checkDigitPositionCorrect(userInput, answer);
         Assert.assertEquals("4B", result);
     }
+
+    @Test
+    public void should_return_0B_when_digit_position_are_all_not_correct() {
+        ArrayList<Integer> answer = new ArrayList<Integer>();
+        answer.add(4);
+        answer.add(3);
+        answer.add(2);
+        answer.add(1);
+        String result = calculatorOfXAXB.checkDigitPositionCorrect(userInput, answer);
+        Assert.assertEquals("0B", result);
+    }
 }

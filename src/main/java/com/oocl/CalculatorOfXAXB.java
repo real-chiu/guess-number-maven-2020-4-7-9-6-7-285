@@ -18,6 +18,7 @@ public class CalculatorOfXAXB {
         if (userInput.get(0) == answer.get(0) && userInput.get(1) == answer.get(1) && userInput.get(2) == answer.get(2) && userInput.get(3) == answer.get(3)) {
             return "4B";
         }
+
         return "";
     }
 }
