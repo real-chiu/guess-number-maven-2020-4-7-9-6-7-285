@@ -50,7 +50,7 @@ public class ProcessAndStatusTest {
         userInputTwo.add(3);
         userInputTwo.add(5);
         String outputOne = calculatorOfXAXB.calulateXAXB(userInputOne, answer);
-        String outputTwo = calculatorOfXAXB.calulateXAXB(userInputTwo, answer);     
+        String outputTwo = calculatorOfXAXB.calulateXAXB(userInputTwo, answer);
         String actualGameStatus = processAndStatus.printHeader();
         actualGameStatus += processAndStatus.printUserInputOutputAndStatus(userInputOne, outputOne);
         actualGameStatus += processAndStatus.printUserInputOutputAndStatus(userInputTwo, outputTwo);
