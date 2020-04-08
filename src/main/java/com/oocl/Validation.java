@@ -5,7 +5,7 @@ import java.util.stream.Collectors;
 
 public class Validation {
     private static final int VALID_USER_INPUT_LENGTH = 4;
-
+    private final String CORRECT_ANSWER_CHECK_STRING = "4A4B";
     public boolean checkIfInputLengthIsValid(ArrayList<Integer> parsedUserInput) {
         return parsedUserInput.size() == VALID_USER_INPUT_LENGTH;
     }
@@ -18,7 +18,10 @@ public class Validation {
         return ProcessAndStatus.getRoundCount() > 6;
     }
 
-    public boolean checkIfUserGetCorrectAnswer() {
+    public boolean checkIfUserGetCorrectAnswer(String correctDigit, String correctPosition) {
+        if ((correctDigit + correctPosition).equals(CORRECT_ANSWER_CHECK_STRING)) {
+            return true;
+        }
         return false;
     }
 }

@@ -35,6 +35,6 @@ public class ProcessAndStatus {
     }
 
     public String winGame() {
-        return "";
+        return "You win!";
     }
 }
