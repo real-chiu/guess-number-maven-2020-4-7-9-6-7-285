@@ -10,6 +10,6 @@ public class Validation {
     }
 
     public boolean checkIfInputDigitIsDistinct(ArrayList<Integer> parsedUserInput) {
-        return true;
+        return parsedUserInput.stream().distinct().collect(Collectors.toList()).size() == VALID_USER_INPUT_LENGTH;;
     }
 }
