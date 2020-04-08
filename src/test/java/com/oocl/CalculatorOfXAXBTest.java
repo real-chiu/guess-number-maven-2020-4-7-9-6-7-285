@@ -41,4 +41,15 @@ public class CalculatorOfXAXBTest {
         String result = calculatorOfXAXB.checkDigitCorrect(userInput, answer);
         Assert.assertEquals("0A", result);
     }
+
+    @Test
+    public void should_return_XA_when_digit_are_partially_correct() {
+        ArrayList<Integer> answer = new ArrayList<Integer>();
+        answer.add(4);
+        answer.add(6);
+        answer.add(7);
+        answer.add(8);
+        String result = calculatorOfXAXB.checkDigitCorrect(userInput, answer);
+        Assert.assertEquals("1A", result);
+    }
 }
