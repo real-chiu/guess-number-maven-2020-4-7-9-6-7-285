@@ -12,9 +12,11 @@ public class CalculatorOfXAXB {
 //            return intermediateCorrectDigitCount;
 //        });
         boolean allCorrect = userInput.stream().allMatch(digit -> answer.contains(digit));
+
         if (allCorrect) {
             return "4A";
         }
+
         return "";
     }
 }
