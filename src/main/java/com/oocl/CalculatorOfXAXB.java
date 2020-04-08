@@ -13,4 +13,9 @@ public class CalculatorOfXAXB {
         });
         return Integer.toString(finalCorrectDigitCount) + "A";
     }
+
+    public String checkDigitPositionCorrect(ArrayList<Integer> userInput, ArrayList<Integer> answer) {
+
+        return "";
+    }
 }
