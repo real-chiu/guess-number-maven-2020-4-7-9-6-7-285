@@ -18,4 +18,12 @@ public class ValidationTest {
         Assert.assertEquals(false, validation.checkIfInputLengthIsValid(mockParsedUserInputWithExtraDigit));
         Assert.assertEquals(false, validation.checkIfInputLengthIsValid(mockParsedUserInputWithNotEnoughDigit));
     }
+
+    @Test
+    public void should_reject_input_when_input_digit_repeats() {
+        String inputWithRepeatedDigit = "1123";
+        ArrayList<Integer> mockParsedUserInputWithRepeatedDigit = processAndStatus.parseUserInputString(inputWithRepeatedDigit);
+
+        Assert.assertEquals(false, validation.checkIfInputDigitIsDistinct(mockParsedUserInputWithRepeatedDigit));
+    }
 }
