@@ -17,15 +17,16 @@ public class App
         Validation validation = new Validation();
 
         ArrayList<Integer> answer = randomNumberGenerator.generateNonRepetitiveFourDigitRandomNumber();
-        System.out.println("Answer: " + Arrays.toString(answer.toArray()));
         String output;
 
         while(true) {
             ProcessAndStatus.incrementRoundCount();
             if (validation.checkIfRoundCountExceedSix()) {
                 System.out.println(processAndStatus.loseGame());
+                System.out.println("Answer: " + Arrays.toString(answer.toArray()));
                 break;
             }
+
             System.out.println("Please input: ");
             String userInputString = processAndStatus.getUserInput();
             ArrayList<Integer> parsedUserInput = processAndStatus.parseUserInputString(userInputString);
@@ -35,10 +36,12 @@ public class App
                 userInputString = processAndStatus.getUserInput();
                 parsedUserInput = processAndStatus.parseUserInputString(userInputString);
             }
+
             output = calculatorOfXAXB.calulateXAXB(parsedUserInput, answer);
             System.out.println(processAndStatus.printUserInputOutputAndStatus(parsedUserInput, output));
             if (validation.checkIfUserGetCorrectAnswer(output)) {
                 System.out.println(processAndStatus.winGame());
+                System.out.println("Answer: " + Arrays.toString(answer.toArray()));
                 break;
             }
         }

@@ -14,7 +14,6 @@ public class ProcessAndStatusTest {
     @Test
     public void should_able_to_parse_user_input() {
         String data = "1234\n";
-        InputStream stdin = System.in;
         System.setIn(new ByteArrayInputStream(data.getBytes()));
         Scanner scanner = new Scanner(System.in);
 

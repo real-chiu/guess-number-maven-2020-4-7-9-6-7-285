@@ -3,6 +3,7 @@ package com.oocl;
 import java.util.ArrayList;
 
 public class CalculatorOfXAXB {
+    public static final String ANSWER_RESULT_PATTERN = "%sA%sB";
 
     public String calulateXAXB(ArrayList<Integer> userInput, ArrayList<Integer> answer) {
         int finalCorrectDigitCount = 0;
@@ -16,6 +17,6 @@ public class CalculatorOfXAXB {
                 }
             }
         }
-        return Integer.toString(finalCorrectDigitCount) + "A" + Integer.toString(finalIncorrectDigitPositionCount) + "B";
+        return String.format(ANSWER_RESULT_PATTERN, Integer.toString(finalCorrectDigitCount), Integer.toString(finalIncorrectDigitPositionCount));
     }
 }
