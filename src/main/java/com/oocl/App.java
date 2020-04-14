@@ -3,10 +3,6 @@ package com.oocl;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-/**
- * Hello world!
- *
- */
 public class App 
 {
     public static void main( String[] args )

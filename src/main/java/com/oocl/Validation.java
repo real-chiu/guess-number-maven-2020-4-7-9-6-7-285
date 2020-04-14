@@ -5,7 +5,7 @@ import java.util.stream.Collectors;
 
 public class Validation {
     private static final int VALID_USER_INPUT_LENGTH = 4;
-    private final String CORRECT_ANSWER_CHECK_STRING = "4A0B";
+    private static final String CORRECT_ANSWER_CHECK_STRING = "4A0B";
 
     public boolean checkIfInputLengthIsValid(ArrayList<Integer> parsedUserInput) {
         return parsedUserInput.size() == VALID_USER_INPUT_LENGTH;

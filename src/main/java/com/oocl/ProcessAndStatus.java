@@ -6,6 +6,10 @@ import java.util.Scanner;
 import java.util.stream.Collectors;
 
 public class ProcessAndStatus {
+    public static final String WRONG_INPUT_STRING = "Wrong Input，Input again";
+    public static final String HEADER = "Input     Output\n";
+    public static final String LOSE_MESSAGE = "You are lose!";
+    public static final String WIN_MESSAGE = "You win!";
     private Scanner userInput = new Scanner(System.in);
     private static int roundCount = 0;
 
@@ -29,20 +33,20 @@ public class ProcessAndStatus {
 
     public String loseGame() {
         if (roundCount > 6) {
-            return "You are lose!";
+            return LOSE_MESSAGE;
         }
         return "";
     }
 
     public String winGame() {
-        return "You win!";
+        return WIN_MESSAGE;
     }
 
     public String printWrongInput() {
-        return "Wrong Input，Input again";
+        return WRONG_INPUT_STRING;
     }
     public String printHeader() {
-        return "Input     Output\n";
+        return HEADER;
     }
 
     public String printUserInputOutputAndStatus (ArrayList<Integer> userInput, String output) {
