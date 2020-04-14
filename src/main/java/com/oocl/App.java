@@ -18,7 +18,7 @@ public class App
         while(true) {
             ProcessAndStatus.incrementRoundCount();
             if (validation.checkIfRoundCountExceedSix()) {
-                System.out.println(processAndStatus.loseGame());
+                System.out.println(processAndStatus.getLoseGameMessage());
                 System.out.println("Answer: " + Arrays.toString(answer.toArray()));
                 break;
             }
@@ -36,7 +36,7 @@ public class App
             output = calculatorOfXAXB.calulateXAXB(parsedUserInput, answer);
             System.out.println(processAndStatus.printUserInputOutputAndStatus(parsedUserInput, output));
             if (validation.checkIfUserGetCorrectAnswer(output)) {
-                System.out.println(processAndStatus.winGame());
+                System.out.println(processAndStatus.getWinGameMessage());
                 System.out.println("Answer: " + Arrays.toString(answer.toArray()));
                 break;
             }

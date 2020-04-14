@@ -34,7 +34,7 @@ public class ValidationTest {
         }
         boolean loseGame = validation.checkIfRoundCountExceedSix();
         Assert.assertEquals(true, loseGame);
-        Assert.assertEquals("You are lose!", processAndStatus.loseGame());
+        Assert.assertEquals("You are lose!", processAndStatus.getLoseGameMessage());
     }
 
     @Test
@@ -42,6 +42,6 @@ public class ValidationTest {
         String correctAnswer = "4A0B";
         boolean winGame = validation.checkIfUserGetCorrectAnswer("4A0B");
         Assert.assertEquals(true, winGame);
-        Assert.assertEquals("You win!", processAndStatus.winGame());
+        Assert.assertEquals("You win!", processAndStatus.getWinGameMessage());
     }
 }

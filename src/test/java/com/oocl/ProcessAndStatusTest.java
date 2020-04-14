@@ -4,7 +4,6 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import java.io.ByteArrayInputStream;
-import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -53,7 +52,7 @@ public class ProcessAndStatusTest {
         String actualGameStatus = processAndStatus.printHeader();
         actualGameStatus += processAndStatus.printUserInputOutputAndStatus(userInputOne, outputOne);
         actualGameStatus += processAndStatus.printUserInputOutputAndStatus(userInputTwo, outputTwo);
-        actualGameStatus += processAndStatus.winGame();
+        actualGameStatus += processAndStatus.getWinGameMessage();
         Assert.assertEquals(expectedGameStatus, actualGameStatus);
 
     }

@@ -6,6 +6,7 @@ import java.util.stream.Collectors;
 public class Validation {
     private static final int VALID_USER_INPUT_LENGTH = 4;
     private static final String CORRECT_ANSWER_CHECK_STRING = "4A0B";
+    public static final int MAX_ROUND_COUNT = 6;
 
     public boolean checkIfInputLengthIsValid(ArrayList<Integer> parsedUserInput) {
         return parsedUserInput.size() == VALID_USER_INPUT_LENGTH;
@@ -16,7 +17,7 @@ public class Validation {
     }
 
     public boolean checkIfRoundCountExceedSix() {
-        return ProcessAndStatus.getRoundCount() > 6;
+        return ProcessAndStatus.getRoundCount() > MAX_ROUND_COUNT;
     }
 
     public boolean checkIfUserGetCorrectAnswer(String output) {
